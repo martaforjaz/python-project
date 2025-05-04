@@ -145,6 +145,11 @@ def main():
 
                 if world.agent.health <= 0:
                     draw_world(screen, world)
+
+                    font = pygame.font.SysFont("consolas", 60, bold=True)
+                    text = font.render("GAME OVER", True, (255, 0, 0))
+                    screen.blit(text, (400 - text.get_width() // 2, 300 - text.get_height() // 2))
+    
                     pygame.display.flip()
                     pygame.time.delay(3000)
                     running = False
