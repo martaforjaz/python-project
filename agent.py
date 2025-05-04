@@ -26,7 +26,7 @@ class Agent:
         self.world = world
 
         # Carregar imagem da nave
-        original_image = pygame.image.load("assets/ship.png").convert_alpha()
+        original_image = pygame.image.load("assets/ship.png")
         scaled = pygame.transform.smoothscale(original_image, (40, 40))
         self.ship_image = pygame.transform.rotate(scaled, -90)
 
